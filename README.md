@@ -31,4 +31,4 @@ All assets are published under [![License: CC BY-NC 4.0](https://img.shields.io/
 
 
 [logo]: https://img.itch.io/aW1hZ2UvMTE1ODU5LzUzNTkwMy5wbmc=/315x250%23c/f9v6hi.png "Logo 2 or 3"
-[logo]: https://img.itch.io/aW1hZ2UvMTE1ODU5LzUzNTkwMy5wbmc=/315x250%23c/f9v6hi.png "screenshot from game"
+[screenshot]: https://img.itch.io/aW1hZ2UvMTE1ODU5LzUzNTkwNS5wbmc=/original/RbOzJq.png "screenshot from game"
