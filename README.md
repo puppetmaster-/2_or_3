@@ -12,12 +12,16 @@ My main goal was to create a little game to learn calculating but it should not 
 There are two numbers.
 The green is your target and the orange is the starting one.
 
+
 On the bottom there are two buttons (cube).
 By pressing on them with
 mouse or <-- and -->
 you can change the orange number.
 
+
 Try to reach the exact number.
+
+![alt text][screenshot]
 
 
 The source code is published under [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -27,3 +31,4 @@ All assets are published under [![License: CC BY-NC 4.0](https://img.shields.io/
 
 
 [logo]: https://img.itch.io/aW1hZ2UvMTE1ODU5LzUzNTkwMy5wbmc=/315x250%23c/f9v6hi.png "Logo 2 or 3"
+[logo]: https://img.itch.io/aW1hZ2UvMTE1ODU5LzUzNTkwMy5wbmc=/315x250%23c/f9v6hi.png "screenshot from game"
