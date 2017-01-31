@@ -1,0 +1,193 @@
+[gd_scene load_steps=14 format=1]
+
+[ext_resource path="res://scenes/button.gd" type="Script" id=1]
+[ext_resource path="res://resources/buttons/2_shoot.png" type="Texture" id=2]
+[ext_resource path="res://resources/buttons/2_particle.png" type="Texture" id=3]
+[ext_resource path="res://resources/buttons/2_plus.png" type="Texture" id=4]
+[ext_resource path="res://resources/buttons/2_div.png" type="Texture" id=5]
+[ext_resource path="res://resources/buttons/2_x.png" type="Texture" id=6]
+[ext_resource path="res://resources/buttons/2_minus.png" type="Texture" id=7]
+[ext_resource path="res://resources/buttons/3_shoot.png" type="Texture" id=8]
+[ext_resource path="res://resources/buttons/3_plus.png" type="Texture" id=9]
+[ext_resource path="res://resources/buttons/3_div.png" type="Texture" id=10]
+[ext_resource path="res://resources/buttons/3_x.png" type="Texture" id=11]
+[ext_resource path="res://resources/buttons/3_minus.png" type="Texture" id=12]
+
+[sub_resource type="ColorRamp" id=1]
+
+offsets = FloatArray( 0.521226, 1 )
+colors = ColorArray( 1, 1, 1, 0.689243, 1, 1, 1, 0 )
+
+[node name="button" type="Node2D"]
+
+script/script = ExtResource( 1 )
+num = 3
+mode = "min"
+
+[node name="2" type="Node2D" parent="."]
+
+visibility/visible = false
+transform/scale = Vector2( 0.22, 0.22 )
+
+[node name="shoot" type="Sprite" parent="2"]
+
+editor/display_folded = true
+visibility/visible = false
+transform/pos = Vector2( 0, -53 )
+texture = ExtResource( 2 )
+
+[node name="Particles2D" type="Particles2D" parent="2/shoot"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 0, 240 )
+config/amount = 50
+config/lifetime = 2.0
+config/time_scale = 3.0
+config/preprocess = 50.0
+config/half_extents = Vector2( 100, 20 )
+config/local_space = false
+config/texture = ExtResource( 3 )
+params/direction = 0.0
+params/spread = 10.0
+params/linear_velocity = 50.0
+params/spin_velocity = 0.0
+params/orbit_velocity = 0.0
+params/gravity_direction = 0.0
+params/gravity_strength = 9.8
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 0.0
+params/initial_angle = 0.0
+params/initial_size = 0.5
+params/final_size = 0.1
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+color/color_ramp = SubResource( 1 )
+
+[node name="add" type="Node2D" parent="2"]
+
+editor/display_folded = true
+
+[node name="cube" type="Sprite" parent="2/add"]
+
+texture = ExtResource( 4 )
+
+[node name="div" type="Node2D" parent="2"]
+
+editor/display_folded = true
+visibility/visible = false
+
+[node name="cube" type="Sprite" parent="2/div"]
+
+texture = ExtResource( 5 )
+
+[node name="mul" type="Node2D" parent="2"]
+
+editor/display_folded = true
+visibility/visible = false
+
+[node name="cube" type="Sprite" parent="2/mul"]
+
+texture = ExtResource( 6 )
+
+[node name="min" type="Node2D" parent="2"]
+
+editor/display_folded = true
+visibility/visible = false
+
+[node name="cube" type="Sprite" parent="2/min"]
+
+texture = ExtResource( 7 )
+
+[node name="3" type="Node2D" parent="."]
+
+transform/scale = Vector2( 0.22, 0.22 )
+
+[node name="shoot" type="Sprite" parent="3"]
+
+editor/display_folded = true
+visibility/visible = false
+transform/pos = Vector2( 0, -53 )
+texture = ExtResource( 8 )
+
+[node name="Particles2D" type="Particles2D" parent="3/shoot"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 0, 240 )
+config/amount = 50
+config/lifetime = 2.0
+config/time_scale = 3.0
+config/preprocess = 50.0
+config/half_extents = Vector2( 100, 20 )
+config/local_space = false
+config/texture = ExtResource( 3 )
+params/direction = 0.0
+params/spread = 10.0
+params/linear_velocity = 50.0
+params/spin_velocity = 0.0
+params/orbit_velocity = 0.0
+params/gravity_direction = 0.0
+params/gravity_strength = 9.8
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 0.0
+params/initial_angle = 0.0
+params/initial_size = 0.5
+params/final_size = 0.1
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+color/color_ramp = SubResource( 1 )
+
+[node name="add" type="Node2D" parent="3"]
+
+editor/display_folded = true
+visibility/visible = false
+
+[node name="cube" type="Sprite" parent="3/add"]
+
+texture = ExtResource( 9 )
+
+[node name="div" type="Node2D" parent="3"]
+
+editor/display_folded = true
+visibility/visible = false
+
+[node name="cube" type="Sprite" parent="3/div"]
+
+texture = ExtResource( 10 )
+
+[node name="mul" type="Node2D" parent="3"]
+
+editor/display_folded = true
+visibility/visible = false
+
+[node name="cube" type="Sprite" parent="3/mul"]
+
+texture = ExtResource( 11 )
+
+[node name="min" type="Node2D" parent="3"]
+
+editor/display_folded = true
+
+[node name="cube" type="Sprite" parent="3/min"]
+
+texture = ExtResource( 12 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -55.0
+margin/top = -60.0
+margin/right = 55.0
+margin/bottom = 60.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+
+

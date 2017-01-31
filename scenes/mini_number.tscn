@@ -1,0 +1,79 @@
+[gd_scene load_steps=12 format=1]
+
+[ext_resource path="res://scenes/mini_number.gd" type="Script" id=1]
+[ext_resource path="res://resources/smal_numbers/0.png" type="Texture" id=2]
+[ext_resource path="res://resources/smal_numbers/1.png" type="Texture" id=3]
+[ext_resource path="res://resources/smal_numbers/2.png" type="Texture" id=4]
+[ext_resource path="res://resources/smal_numbers/3.png" type="Texture" id=5]
+[ext_resource path="res://resources/smal_numbers/4.png" type="Texture" id=6]
+[ext_resource path="res://resources/smal_numbers/5.png" type="Texture" id=7]
+[ext_resource path="res://resources/smal_numbers/6.png" type="Texture" id=8]
+[ext_resource path="res://resources/smal_numbers/7.png" type="Texture" id=9]
+[ext_resource path="res://resources/smal_numbers/8.png" type="Texture" id=10]
+[ext_resource path="res://resources/smal_numbers/9.png" type="Texture" id=11]
+
+[node name="num" type="Node2D"]
+
+script/script = ExtResource( 1 )
+num = 8
+
+[node name="0" type="Sprite" parent="."]
+
+visibility/visible = false
+texture = ExtResource( 2 )
+centered = false
+
+[node name="1" type="Sprite" parent="."]
+
+visibility/visible = false
+texture = ExtResource( 3 )
+centered = false
+
+[node name="2" type="Sprite" parent="."]
+
+visibility/visible = false
+texture = ExtResource( 4 )
+centered = false
+
+[node name="3" type="Sprite" parent="."]
+
+visibility/visible = false
+texture = ExtResource( 5 )
+centered = false
+
+[node name="4" type="Sprite" parent="."]
+
+visibility/visible = false
+texture = ExtResource( 6 )
+centered = false
+
+[node name="5" type="Sprite" parent="."]
+
+visibility/visible = false
+texture = ExtResource( 7 )
+centered = false
+
+[node name="6" type="Sprite" parent="."]
+
+visibility/visible = false
+texture = ExtResource( 8 )
+centered = false
+
+[node name="7" type="Sprite" parent="."]
+
+visibility/visible = false
+texture = ExtResource( 9 )
+centered = false
+
+[node name="8" type="Sprite" parent="."]
+
+texture = ExtResource( 10 )
+centered = false
+
+[node name="9" type="Sprite" parent="."]
+
+visibility/visible = false
+texture = ExtResource( 11 )
+centered = false
+
+

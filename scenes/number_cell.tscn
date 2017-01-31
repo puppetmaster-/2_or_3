@@ -1,0 +1,157 @@
+[gd_scene load_steps=22 format=1]
+
+[ext_resource path="res://scenes/number_cell.gd" type="Script" id=1]
+[ext_resource path="res://resources/numbers/R_0.png" type="Texture" id=2]
+[ext_resource path="res://resources/numbers/R_1.png" type="Texture" id=3]
+[ext_resource path="res://resources/numbers/R_2.png" type="Texture" id=4]
+[ext_resource path="res://resources/numbers/R_3.png" type="Texture" id=5]
+[ext_resource path="res://resources/numbers/R_4.png" type="Texture" id=6]
+[ext_resource path="res://resources/numbers/R_5.png" type="Texture" id=7]
+[ext_resource path="res://resources/numbers/R_6.png" type="Texture" id=8]
+[ext_resource path="res://resources/numbers/R_7.png" type="Texture" id=9]
+[ext_resource path="res://resources/numbers/R_8.png" type="Texture" id=10]
+[ext_resource path="res://resources/numbers/R_9.png" type="Texture" id=11]
+[ext_resource path="res://resources/numbers/L_0.png" type="Texture" id=12]
+[ext_resource path="res://resources/numbers/L_1.png" type="Texture" id=13]
+[ext_resource path="res://resources/numbers/L_2.png" type="Texture" id=14]
+[ext_resource path="res://resources/numbers/L_3.png" type="Texture" id=15]
+[ext_resource path="res://resources/numbers/L_4.png" type="Texture" id=16]
+[ext_resource path="res://resources/numbers/L_5.png" type="Texture" id=17]
+[ext_resource path="res://resources/numbers/L_6.png" type="Texture" id=18]
+[ext_resource path="res://resources/numbers/L_7.png" type="Texture" id=19]
+[ext_resource path="res://resources/numbers/L_8.png" type="Texture" id=20]
+[ext_resource path="res://resources/numbers/L_9.png" type="Texture" id=21]
+
+[node name="cell" type="Node2D"]
+
+transform/scale = Vector2( 0.22, 0.22 )
+script/script = ExtResource( 1 )
+num = 4
+color = "red"
+
+[node name="red" type="Node2D" parent="."]
+
+[node name="0" type="Sprite" parent="red"]
+
+visibility/visible = false
+texture = ExtResource( 2 )
+centered = false
+
+[node name="1" type="Sprite" parent="red"]
+
+visibility/visible = false
+texture = ExtResource( 3 )
+centered = false
+
+[node name="2" type="Sprite" parent="red"]
+
+visibility/visible = false
+texture = ExtResource( 4 )
+centered = false
+
+[node name="3" type="Sprite" parent="red"]
+
+visibility/visible = false
+texture = ExtResource( 5 )
+centered = false
+
+[node name="4" type="Sprite" parent="red"]
+
+texture = ExtResource( 6 )
+centered = false
+
+[node name="5" type="Sprite" parent="red"]
+
+visibility/visible = false
+texture = ExtResource( 7 )
+centered = false
+
+[node name="6" type="Sprite" parent="red"]
+
+visibility/visible = false
+texture = ExtResource( 8 )
+centered = false
+
+[node name="7" type="Sprite" parent="red"]
+
+visibility/visible = false
+texture = ExtResource( 9 )
+centered = false
+
+[node name="8" type="Sprite" parent="red"]
+
+visibility/visible = false
+texture = ExtResource( 10 )
+centered = false
+
+[node name="9" type="Sprite" parent="red"]
+
+visibility/visible = false
+texture = ExtResource( 11 )
+centered = false
+
+[node name="green" type="Node2D" parent="."]
+
+editor/display_folded = true
+visibility/visible = false
+
+[node name="0" type="Sprite" parent="green"]
+
+visibility/visible = false
+texture = ExtResource( 12 )
+centered = false
+
+[node name="1" type="Sprite" parent="green"]
+
+visibility/visible = false
+texture = ExtResource( 13 )
+centered = false
+
+[node name="2" type="Sprite" parent="green"]
+
+visibility/visible = false
+texture = ExtResource( 14 )
+centered = false
+
+[node name="3" type="Sprite" parent="green"]
+
+visibility/visible = false
+texture = ExtResource( 15 )
+centered = false
+
+[node name="4" type="Sprite" parent="green"]
+
+texture = ExtResource( 16 )
+centered = false
+
+[node name="5" type="Sprite" parent="green"]
+
+visibility/visible = false
+texture = ExtResource( 17 )
+centered = false
+
+[node name="6" type="Sprite" parent="green"]
+
+visibility/visible = false
+texture = ExtResource( 18 )
+centered = false
+
+[node name="7" type="Sprite" parent="green"]
+
+visibility/visible = false
+texture = ExtResource( 19 )
+centered = false
+
+[node name="8" type="Sprite" parent="green"]
+
+visibility/visible = false
+texture = ExtResource( 20 )
+centered = false
+
+[node name="9" type="Sprite" parent="green"]
+
+visibility/visible = false
+texture = ExtResource( 21 )
+centered = false
+
+

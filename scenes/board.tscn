@@ -1,0 +1,188 @@
+[gd_scene load_steps=12 format=1]
+
+[ext_resource path="res://scenes/board.gd" type="Script" id=1]
+[ext_resource path="res://resources/board_end.png" type="Texture" id=2]
+[ext_resource path="res://scenes/mini_number.tscn" type="PackedScene" id=3]
+[ext_resource path="res://resources/board.png" type="Texture" id=4]
+[ext_resource path="res://scenes/number_cell.tscn" type="PackedScene" id=5]
+[ext_resource path="res://resources/board.png" type="Texture" id=6]
+[ext_resource path="res://resources/board.png" type="Texture" id=7]
+[ext_resource path="res://resources/board.png" type="Texture" id=8]
+[ext_resource path="res://resources/board.png" type="Texture" id=9]
+
+[sub_resource type="Animation" id=1]
+
+resource/name = "new_number"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 1 ), "transitions":FloatArray( 1 ), "values":[ { "args":[  ], "method":"next_numbers" } ] }
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = { "times":FloatArray( 0.5 ), "transitions":FloatArray( 1 ), "values":[ { "args":[ "win" ], "method":"playSound" } ] }
+
+[sub_resource type="Animation" id=2]
+
+resource/name = "same_number"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 1 ), "transitions":FloatArray( 1 ), "values":[ { "args":[  ], "method":"same_number" } ] }
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = { "times":FloatArray( 0.3 ), "transitions":FloatArray( 1 ), "values":[ { "args":[ "error" ], "method":"playSound" } ] }
+
+[node name="board" type="Node2D"]
+
+script/script = ExtResource( 1 )
+level = 1
+gameRound = 0
+
+[node name="end" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 0, -9 )
+transform/scale = Vector2( 0.22, 0.22 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="m1" parent="end" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 254.727, 1154.73 )
+num = 0
+
+[node name="m2" parent="end" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 109.273, 1236.55 )
+num = 0
+
+[node name="s1" parent="end" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 618.364, 945.636 )
+num = 0
+
+[node name="s2" parent="end" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 472.909, 1027.45 )
+num = 0
+
+[node name="ms1" parent="end" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 836.545, 818.364 )
+num = 0
+
+[node name="e1" parent="end" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 836.545, 1154.73 )
+num = 0
+
+[node name="e2" parent="end" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 691.091, 1236.55 )
+num = 0
+
+[node name="game" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, -9 )
+transform/scale = Vector2( 0.22, 0.22 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="enemy" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="1" parent="enemy" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 152.04, 47.04 )
+num = 0
+color = "green"
+
+[node name="2" parent="enemy" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 88.04, 84.04 )
+num = 0
+color = "green"
+
+[node name="3" parent="enemy" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 24.04, 121.04 )
+num = 0
+color = "green"
+
+[node name="player" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 0, 157 )
+
+[node name="1" parent="player" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 152.04, 47.04 )
+num = 0
+
+[node name="2" parent="player" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 88.04, 84.04 )
+num = 0
+
+[node name="3" parent="player" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 24.04, 121.04 )
+num = 0
+
+[node name="modes" type="Node2D" parent="."]
+
+editor/display_folded = true
+visibility/visible = false
+transform/pos = Vector2( 0, -9 )
+transform/scale = Vector2( 0.22, 0.22 )
+
+[node name="easy" type="Sprite" parent="modes"]
+
+texture = ExtResource( 6 )
+centered = false
+
+[node name="time" type="Sprite" parent="modes"]
+
+visibility/visible = false
+texture = ExtResource( 7 )
+centered = false
+
+[node name="dead" type="Sprite" parent="modes"]
+
+visibility/visible = false
+texture = ExtResource( 8 )
+centered = false
+
+[node name="spin" type="Sprite" parent="modes"]
+
+visibility/visible = false
+texture = ExtResource( 9 )
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/new_number = SubResource( 1 )
+anims/same_number = SubResource( 2 )
+next/same_number = ""
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+

@@ -1,0 +1,16 @@
+[gd_resource type="SampleLibrary" load_steps=6 format=1]
+
+[ext_resource path="res://sound/bood.wav" type="Sample" id=1]
+[ext_resource path="res://sound/error.wav" type="Sample" id=2]
+[ext_resource path="res://sound/ok.wav" type="Sample" id=3]
+[ext_resource path="res://sound/start.wav" type="Sample" id=4]
+[ext_resource path="res://sound/win.wav" type="Sample" id=5]
+
+[resource]
+
+samples/bad = { "db":0.0, "pitch":1.0, "sample":ExtResource( 1 ) }
+samples/error = { "db":0.0, "pitch":1.0, "sample":ExtResource( 2 ) }
+samples/ok = { "db":0.0, "pitch":1.0, "sample":ExtResource( 3 ) }
+samples/start = { "db":0.0, "pitch":1.0, "sample":ExtResource( 4 ) }
+samples/win = { "db":0.0, "pitch":1.0, "sample":ExtResource( 5 ) }
+
